@@ -2,16 +2,13 @@ const mongoose = require("mongoose");
 
 // Définir le schéma du produit
 const ProductSchema = mongoose.Schema({
-  nom: {
-    type: String,
+  nom: String,
+  description:String,
+  prix: Number,
+  images: [String],
+  
   },
-  description: {
-    type: String,
-  },
-  prix: {
-    type: Number,
-  },
-});
+);
 
 // Exporter le modèle Produit
 module.exports = mongoose.model("Produit", ProductSchema);

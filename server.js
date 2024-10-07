@@ -29,6 +29,7 @@ app.get("/", (req, res) => {
 
 let PORT = 8080;
 
+require('./app/routes/commanderoute.js')(app)
 
 require('./app/routes/Productroute.js')(app)
 app.listen(PORT, () => {

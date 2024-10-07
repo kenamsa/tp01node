@@ -3,7 +3,7 @@ const Produit = require("../model/prodModel.js");
 // Créer et sauvegarder un nouveau produit
 exports.create = (req, res) => {
   // Valider la requête
-  if (!req.body.nom || !req.body.description || !req.body.prix) {
+  if (!req.body.nom || !req.body.description || !req.body.prix ||!req.body.images) {
     return res.status(400).send({
       message: "Le contenu du produit ne peut pas être vide.",
     });
@@ -14,6 +14,7 @@ exports.create = (req, res) => {
     nom: req.body.nom,
     description: req.body.description,
     prix: req.body.prix,
+    images:req.body.images,
   });
 
   // Sauvegarder le produit dans la base de données

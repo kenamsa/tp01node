@@ -1,5 +1,5 @@
 module.exports = (app) => {
-    const productController = require("../controllers/ProductSchema.js");
+    const productController = require("../controllers/ProductController.js");
 
     app.post("/create", productController.create);
   
